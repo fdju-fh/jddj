@@ -1,0 +1,199 @@
+// Переменные
+$primary-bg-color: rgb(226, 249, 230);
+$primary-color: rgb(5, 91, 62);
+$secondary-bg-color: #667eea2f;
+$white: #fff;
+$light-blue: aliceblue;
+$light-teal: rgba(206, 248, 243, 0.466);
+$border-radius: 12px;
+$shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+// Миксины
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding: {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+}
+
+// Стили
+body {
+  background-color: $primary-bg-color;
+  padding: 80px;
+}
+
+a {
+  color: $primary-color;
+}
+
+header {
+  @include flex-center;
+  background-color: $light-blue;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: $white;
+}
+
+nav {
+  display: flex;
+  gap: 100px;
+  padding-right: 500px;
+  font-size: 20px;
+
+  a, b {
+    padding-top: 30px;
+  }
+
+  p {
+    padding-top: 14px;
+  }
+
+  h1 {
+    padding-right: 200px;
+  }
+}
+
+aside {
+  @include flex-center;
+}
+
+footer {
+  @include flex-center;
+  @include padding(50px, 0, 40px, 0);
+  gap: 40px;
+  background-color: $secondary-bg-color;
+  border-radius: $border-radius;
+
+  .footer_1 {
+    display: block;
+    padding: {
+      right: 50px;
+      top: 80px;
+    }
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .ps {
+    font-weight: bold;
+  }
+
+  .year {
+    display: block;
+  }
+}
+
+.form_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    font-size: 20px;
+    @include flex-column;
+    background: $light-teal;
+    @include padding(50px, 40px, 50px, 40px);
+    border-radius: 20px;
+    box-shadow: $shadow;
+    max-width: 500px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 12px;
+    color: #555;
+  }
+
+  input {
+    padding: 18px 20px;
+    font-size: 1.1em;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+
+    &:focus {
+      outline: none;
+      border-color: #667eea;
+      background-color: white;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+  }
+}
+
+.text_video {
+  @include flex-center;
+  @include padding(40px, 250px, 0, 250px);
+}
+
+#text_h2_p {
+  display: block;
+  @include padding(250px, 30px, 0, 0);
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+}
+
+.block_text {
+  @include padding(40px, 250px, 0, 250px);
+  font-size: 25px;
+
+  p {
+    background-color: azure;
+    padding: 7%;
+    border-radius: 1%;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.block_one {
+  @include padding(40px, 0, 40px, 0);
+  display: flex;
+}
+
+caption {
+  font-size: 20px;
+}
+
+.tabl {
+  td {
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+  }
+}

@@ -91,14 +91,11 @@ footer{
     font-size: 20px;
     display: flex;
     flex-direction: column;
-
     background: rgba(206, 248, 243, 0.466);
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    width: 100%;
     max-width: 500px;
-    backdrop-filter: blur(10px);
 }
 
 .form_1 label {
@@ -113,7 +110,6 @@ footer{
     border: 2px solid #e1e5e9;
     border-radius: 12px;
     background-color: #f8f9fa;
-    transition: all 0.3s ease;
 }
 
 .form_1 input:focus {
@@ -121,7 +117,6 @@ footer{
     border-color: #667eea;
     background-color: white;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-    transform: translateY(-2px);
 }
 
 .text_video{
@@ -174,4 +169,10 @@ footer{
 
 caption{
     font-size: 20px;
+}
+
+.tabl td{
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
 }
